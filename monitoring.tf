@@ -23,7 +23,7 @@ resource "google_monitoring_dashboard" "splunk-export-pipeline-dashboard" {
   project        = local.scoping_project
   dashboard_json = <<EOF
   {
-    "displayName": "Splunk Log Export Ops Dashboard",
+    "displayName": "Splunk Log Export Ops",
     "mosaicLayout": {
       "columns": 12,
       "tiles": [
@@ -838,4 +838,10 @@ resource "google_monitoring_dashboard" "splunk-export-pipeline-dashboard" {
   }
 
   EOF
+  lifecycle{
+    ignore_changes = [
+      etag,
+      mosaicLayout
+    ]
+  }
 }
