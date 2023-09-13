@@ -840,8 +840,7 @@ resource "google_monitoring_dashboard" "splunk-export-pipeline-dashboard" {
   EOF
   lifecycle{
     ignore_changes = [
-      etag,
-      mosaicLayout
+      dashboard_json
     ]
   }
 }
