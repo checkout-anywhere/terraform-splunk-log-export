@@ -23,7 +23,7 @@ resource "google_monitoring_dashboard" "splunk-export-pipeline-dashboard" {
   project        = local.scoping_project
   dashboard_json = <<EOF
   {
-    "displayName": "Splunk Log Export Ops",
+    "displayName": "Splunk Log Export Ops Dashboard",
     "mosaicLayout": {
       "columns": 12,
       "tiles": [
