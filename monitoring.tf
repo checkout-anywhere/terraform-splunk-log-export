@@ -726,7 +726,15 @@ resource "google_monitoring_dashboard" "splunk-export-pipeline-dashboard" {
           "height": 1,
           "widget": {
             "text": {
-              "format": "MARKDOWN"
+              "format": "MARKDOWN",
+              "style": {
+                "backgroundColor": "",
+                "fontSize": "FONT_SIZE_UNSPECIFIED",
+                "horizontalAlignment": "H_LEFT",
+                "padding": "PADDING_SIZE_UNSPECIFIED",
+                "textColor": "",
+                "verticalAlignment": "V_TOP"
+              }
             },
             "title": "Pipeline Throughput (EPS), Latency (ms), Errors"
           },
@@ -737,7 +745,15 @@ resource "google_monitoring_dashboard" "splunk-export-pipeline-dashboard" {
           "height": 1,
           "widget": {
             "text": {
-              "format": "MARKDOWN"
+              "format": "MARKDOWN",
+              "style": {
+                "backgroundColor": "",
+                "fontSize": "FONT_SIZE_UNSPECIFIED",
+                "horizontalAlignment": "H_LEFT",
+                "padding": "PADDING_SIZE_UNSPECIFIED",
+                "textColor": "",
+                "verticalAlignment": "V_TOP"
+              }
             },
             "title": "Pipeline Performance Summary"
           },
@@ -822,4 +838,9 @@ resource "google_monitoring_dashboard" "splunk-export-pipeline-dashboard" {
   }
 
   EOF
+  lifecycle{
+    ignore_changes = [
+      dashboard_json
+    ]
+  }
 }

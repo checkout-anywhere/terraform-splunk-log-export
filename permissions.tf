@@ -12,14 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-resource "google_pubsub_topic_iam_binding" "input_sub_publisher" {
-  project = google_pubsub_topic.dataflow_input_pubsub_topic.project
-  topic   = google_pubsub_topic.dataflow_input_pubsub_topic.name
-  role    = "roles/pubsub.publisher"
-  members = [
-    google_logging_project_sink.project_log_sink.writer_identity
-  ]
-}
+# HACK Taken out of the module in order to add more members
+
+# resource "google_pubsub_topic_iam_binding" "input_sub_publisher" {
+#   project = google_pubsub_topic.dataflow_input_pubsub_topic.project
+#   topic   = google_pubsub_topic.dataflow_input_pubsub_topic.name
+#   role    = "roles/pubsub.publisher"
+#   members = [
+#     google_logging_project_sink.project_log_sink.writer_identity
+#   ]
+# }
 
 resource "google_pubsub_subscription_iam_binding" "input_sub_subscriber" {
   project      = google_pubsub_subscription.dataflow_input_pubsub_subscription.project

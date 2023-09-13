@@ -52,6 +52,7 @@ These deployment templates are provided as is, without warranty. See [Copyright 
 | <a name="output_dataflow_job_id"></a> [dataflow_job_id](#output_dataflow_job_id) | n/a |
 | <a name="output_dataflow_log_export_dashboard"></a> [dataflow_log_export_dashboard](#output_dataflow_log_export_dashboard) | n/a |
 | <a name="output_dataflow_output_deadletter_subscription"></a> [dataflow_output_deadletter_subscription](#output_dataflow_output_deadletter_subscription) | n/a |
+| <a name="output_dataflow_log_export_sink_writer_identit"></a> [dataflow_log_export_sink_writer_identit](#output_dataflow_log_export_sink_writer_identit) | n/a |
 <!-- END_TF_DOCS -->
 
 ### Monitoring Dashboard (Batteries Included)
