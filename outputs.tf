@@ -13,3 +13,7 @@ output "dataflow_output_deadletter_subscription" {
 output "dataflow_log_export_dashboard" {
   value = google_monitoring_dashboard.splunk-export-pipeline-dashboard.id
 }
+
+output "dataflow_log_export_sink_writer_identity" {
+  value = google_logging_project_sink.project_log_sink.writer_identity
+}
